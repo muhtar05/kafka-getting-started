@@ -14,7 +14,7 @@ if __name__ == "__main__":
             p.offset = OFFSET_BEGINNING
             consumer.assign(partitions)
 
-    topic = "user_actions"
+    topic = "user-actions"
     consumer.subscribe([topic], on_assign=reset_offset)
 
     try:
